@@ -15,10 +15,11 @@ export class Satellite {
     }
     
     shouldShowWarning() {
-        if (this.type === "Space Debris") {
-            return true
+        let result = this.type.match(/debris/i);
+        if (result) {
+            return true;
         } else {
-            return false
+            return false;
         }
     }
 }
